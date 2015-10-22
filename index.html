@@ -11,10 +11,10 @@
        HELLO {{name}}!
     </div>
 	<div ng-controller="todoListCtrl as ctrl"> 
-		<input ng-model="ctrl.todo.name" ng-keydown="ctrl.addTodo($event)">
+		<input ng-model="ctrl.todo.name" ng-keydown="ctrl.addTodo($event)">Saisissez quelque chose et taper entrée pour ajouter à la liste.</input>
 		<ul>
             <li ng-repeat="todo in ctrl.todos">
-                <label>{{todo.id+todo.name}}</label>            
+                <div>{{todo.name}} <button ng-click="ctrl.delTodo(todo.id)">-</button></div>
             </li>
         </ul> 
 	</div>
