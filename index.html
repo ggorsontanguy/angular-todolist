@@ -10,13 +10,13 @@
     <div ng-controller="exempleCtrl">
        HELLO {{name}}!
     </div>
-	<div ng-controller="todoListCtrl"> 
-		<input ng-model="todo" ng-keydown="addTodo($event)">
+	<div ng-controller="todoListCtrl as ctrl"> 
+		<input ng-model="ctrl.todo.name" ng-keydown="ctrl.addTodo($event)">
 		<ul>
-            <li ng-repeat="todo in todos">
-                <label>{{todo}}</label>            
+            <li ng-repeat="todo in ctrl.todos">
+                <label>{{todo.id+todo.name}}</label>            
             </li>
-        </ul> 	
+        </ul> 
 	</div>
 
 

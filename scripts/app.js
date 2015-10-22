@@ -4,8 +4,15 @@ app.controller("exempleCtrl", function($scope) {
     $scope.name = "World"
 });
 
-app.controller("todoListCtrl", function($scope) {
-	$scope.todos = ["init"];
+app.controller("todoListCtrl", function() {
+	
+	var nbTodo = 0;
+	
+	this.todo = {
+		name
+	}
+	
+	this.todos = [];
 	
 	if(!Array.indexOf){
 		Array.prototype.indexOf = function(obj){
@@ -15,14 +22,14 @@ app.controller("todoListCtrl", function($scope) {
 		return -1;
 		}
 	}
-	
-	$scope.addTodo = function($event) {
+		
+	this.addTodo = function($event) {
 		if ($event.which === 13) {
-			if ($scope.todos.indexOf($scope.todo)===-1)
-				$scope.todos.push($scope.todo);
+			//if (this.todos.indexOf(this.todo)===-1) {
+				this.todos.push({id : nbTodo++, name:this.todo.name});
+			//	}
+				
 		}
 	}
-	
-	
-	
+
 });
