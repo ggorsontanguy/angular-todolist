@@ -6,8 +6,6 @@ app.controller("exempleCtrl", function($scope) {
 
 app.controller("todoListCtrl", function() {
 	
-	var nbTodo = 0;
-	
 	this.todo = {
 		name
 	}
@@ -16,7 +14,8 @@ app.controller("todoListCtrl", function() {
 		
 	this.addTodo = function($event) {
 		if ($event.which === 13 && this.todo.name!=="") {
-			this.todos.push({id : nbTodo++, name:this.todo.name});
+			this.todos.push({
+				name:this.todo.name});
 			this.todo.name = "";
 		}
 	}
@@ -28,7 +27,6 @@ app.controller("todoListCtrl", function() {
 			this.todos.splice(position, 1);
 		} else {
 			this.todos = [];
-			nbTodo = 0;
 		}
 	}
 
