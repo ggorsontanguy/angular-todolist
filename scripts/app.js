@@ -6,16 +6,17 @@ app.controller("exempleCtrl", function($scope) {
 
 app.controller("todoListCtrl", function() {
 	
-	this.todo = {
-		name
+	function ItemTodo(name) {
+		this.name = name;
 	}
+	
+	this.todo = new ItemTodo("");
 	
 	this.todos = [];
 		
 	this.addTodo = function($event) {
 		if ($event.which === 13 && this.todo.name!=="") {
-			this.todos.push({
-				name:this.todo.name});
+			this.todos.push(new ItemTodo(this.todo.name));
 			this.todo.name = "";
 		}
 	}
