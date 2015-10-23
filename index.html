@@ -14,7 +14,7 @@
 		<input ng-model="ctrl.todo.name" ng-keydown="ctrl.addTodo($event)">Saisissez quelque chose et taper entrée pour ajouter à la liste.</input>
 		<ul>
             <li ng-repeat="todo in ctrl.todos">
-                <div>{{todo.name}} <button ng-click="ctrl.delTodo(todo.id)">-</button></div>
+                <div>{{todo.name}} <button ng-click="ctrl.delTodo(todo)">-</button></div>
             </li>
         </ul> 
 	</div>

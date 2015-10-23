@@ -21,10 +21,11 @@ app.controller("todoListCtrl", function() {
 		}
 	}
 	
-	this.delTodo = function(id) {
-		console.log(id + " del " + this.todos.length )
+	this.delTodo = function(todo) {
+		console.log(todo + " del " + this.todos )
 		if (this.todos.length > 1) {
-			this.todos.splice(id, 1);
+			var position = this.todos.indexOf(todo);
+			this.todos.splice(position, 1);
 		} else {
 			this.todos = [];
 			nbTodo = 0;
