@@ -21,7 +21,12 @@ app.controller("todoListCtrl", function() {
 	}
 	
 	this.delTodo = function(todo) {
-		console.log(todo + " del " + this.todos )
+		if (console) {
+			console.info(todo);
+			console.log("del");
+			console.info(this.todos);
+		}
+		
 		if (this.todos.length > 1) {
 			var position = this.todos.indexOf(todo);
 			this.todos.splice(position, 1);
