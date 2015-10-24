@@ -12,12 +12,20 @@
     </div>
 	<div ng-controller="todoListCtrl as ctrl" ng-class=" "> 
 		<input ng-model="ctrl.todo.name" ng-keydown="ctrl.addTodo($event)">Saisissez quelque chose et taper entrée pour ajouter à la liste.</input>
-		<ul>
-            <li ng-repeat="todo in ctrl.todos">
-                <div ng-style="todo.checked?{'text-decoration':'line-through'}:{}"><input type="checkbox" ng-model="todo.checked">{{todo.name}}</input> <button ng-click="ctrl.delTodo(todo)">-</button></div>
-            </li>
-        </ul> 
-	</div>
+		<table>
+			<tr ng-repeat="todo in ctrl.todos">
+				<td>
+					<input type="checkbox" ng-model="todo.checked"/>
+				</td>
+				<td ng-style="todo.checked?{'text-decoration':'line-through'}:{}">
+					{{todo.name}}
+				</td>
+				<td>
+					<button ng-click="ctrl.delTodo(todo)">-</button>
+				</td>
+			</tr>
+		</table>
+		</div>
 
 
 </div>
