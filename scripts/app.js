@@ -6,18 +6,18 @@ app.controller("exempleCtrl", function($scope) {
 
 app.controller("todoListCtrl", function() {
 	
-	function ItemTodo(name, checked) {
+	function Task(name, checked) {
 		this.name = name;
 		this.checked = checked;
 	}
 	
-	this.todo = new ItemTodo("", false);
+	this.todo = new Task("", false);
 	
 	this.todos = [];
 		
 	this.addTodo = function($event) {
 		if ($event.which === 13 && this.todo.name!=="") {
-			this.todos.push(new ItemTodo(this.todo.name, false));
+			this.todos.push(new Task(this.todo.name, false));
 			this.todo.name = "";
 		}
 	}
