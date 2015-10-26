@@ -1,4 +1,4 @@
-Le but de ce kata Ã©tait de crÃ©er une todolist en utilisant angular de base:
-* Champ de saisie permettant de rajouter des tÃ¢ches
-* Bouton permettant de supprimer une tÃ¢che
-* Case Ã  cocher permettant de barrer les tÃ¢ches faites
+Le but de ce kata était de créer une todolist en utilisant angular de base:
+* Champ de saisie permettant de rajouter des tâches
+* Bouton permettant de supprimer une tâche
+* Case à cocher permettant de barrer les tâches faites
